@@ -1,0 +1,24 @@
+
+{% extends 'Sis/Front.html' %}
+{% block body %}
+<form method="post" action="">
+    {% csrf_token %}
+    <div>
+        <input type="text" name="{{ form.name.name }}" value="{{ form.name.value|default_if_none:'' }}"
+               placeholder="Enter your name" required>
+    </div>
+    <div>
+        <input type="text" name="{{ form.fname.name }}" value="{{ form.fname.value|default_if_none:'' }}"
+               placeholder="Enter your Father name" required>
+    </div>
+    <div>
+        <input type="email" name="{{ form.email.name }}" value="{{ form.email.value|default_if_none:'' }}"
+               placeholder="Enter your Email" required>
+    </div>
+    <div>
+        <input type="text" name="{{ form.seat.name }}" value="{{ form.seat.value|default_if_none:'' }}"
+               placeholder="Enter your name" required>
+    </div>
+    <button type="submit">Submit</button>
+</form>
+{% endblock%}

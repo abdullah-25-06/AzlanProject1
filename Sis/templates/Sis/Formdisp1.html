@@ -1,0 +1,35 @@
+{% extends 'Sis/Front.html' %}
+{% block body %}
+    
+<div class="head">
+    <div class="forms">
+    <form method="post" action="">
+        {% csrf_token %}
+            <h1 class="text-center">Student-Portal</h1>
+            <div class="form1">
+                <p>Full Name:</p>
+                <input label="" type="text" name="{{ form.name.name }}" value="{{ form.name.value|default_if_none:'' }}"
+                    placeholder="Enter your name" required>
+            </div>
+            <div class="form2">
+                <p>Father Name:</p>
+                <input  type="text" name="{{ form.fname.name }}" value="{{ form.fname.value|default_if_none:'' }}"
+                    placeholder="Enter your Father name" required>
+            </div>
+            <div class="form3">
+                <p>Email:</p>
+                <input type="text" name="{{ form.email.name }}" value="{{ form.email.value|default_if_none:'' }}"
+                    placeholder="Enter your Email" required>
+            </div>
+            <div class="form4">
+                <p>Seat no:</p>
+                <input type="text" name="{{ form.seat.name }}" value="{{ form.seat.value|default_if_none:'' }}"
+                    placeholder="Enter your name" required>
+            </div>
+            <div class="butn">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock%}

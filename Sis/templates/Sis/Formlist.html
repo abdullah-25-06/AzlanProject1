@@ -1,0 +1,27 @@
+{% extends 'Sis/Front.html' %}
+{% block body %}
+
+<div class="container">
+    <h3>Tables Of registered Students</h3>
+    <table class="table table-hover"    >
+        <thead class="table-dark">
+        <tr>
+            <th scope="col">Seat Number</th>
+            <th scope="col">Name</th>
+            <th scope="col"></th>
+
+        </tr>
+        </thead>
+        <tbody>
+        {% for item in list %}
+        <tr>
+            <td class="text-black"> {{ item.seat }}</td>
+            <td>{{ item.name }}</td>
+            <td><a class="text-dark" href="{% url 'sis:detail' item.id %}"><button type="submit" class="btn btn-secondary">View</button></a></td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
+<!--<a class="text-dark" href="{% url 'sis:detail' item.id %}"></a>-->

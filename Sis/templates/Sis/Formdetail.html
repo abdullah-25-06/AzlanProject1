@@ -1,0 +1,25 @@
+{% extends 'Sis/Front.html' %}
+<!--{{ detail.name }} <br>-->
+<!--{{ detail.fname }}<br>-->
+<!--{{ detail.email }}<br>-->
+<!--{{ detail.seat }}-->
+
+{% block body %}
+
+<div class="container">
+<h1>Complete detail !</h1>
+    <div class="card">
+        <h5 class="card-header bg bg-dark text-white">{{ detail.name }}</h5>
+        <div class="card-body bg bg-light">
+            <h5 class="card-title">Complete details of {{ detail.name }}</h5> <hr>
+            <ul class="list-group list-group-flush ">
+                <li class="list-group-item bg bg-light"><h5>Name: {{ detail.name }}</h5></li>
+                <li class="list-group-item bg bg-light"><h5>Father Name: {{ detail.fname }}</h5></li>
+                <li class="list-group-item bg bg-light"><h5>Email: {{ detail.email }}</h5></li>
+                <li class="list-group-item bg bg-light"><h5>Seat Number: {{ detail.seat }}</h5></li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+{% endblock %}
